@@ -281,8 +281,8 @@ section{
 	float: left;
 }
 section.top{
-	padding: 15% 0px 35px 0px;
-	min-height: 90%;
+    padding: 15% 0px 35px 0px;
+    min-height: 90%;
 	background: url(../images/bg_top.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -446,6 +446,7 @@ section.features h2{
 	width:25%;
 	float: left;
 	margin: 60px 4.166666666666667%;
+	min-height: 340px;
 }
 .features_img{
 	width:50%;
@@ -655,6 +656,7 @@ section.key_id{
 	text-transform: uppercase;
 	color: #73c940;
 	margin-bottom: 20px;
+	opacity: 0;
 }
 
 .key_social{
@@ -672,6 +674,7 @@ section.key_id{
 .key_social_left h2{
 	font: 300 36px/45px "Roboto", Helvetica, Arial, sans-serif;
 	color: #666666;
+	opacity: 0;
 }
 .key_social_left p{
 	font: 300 24px/30px "Roboto", Helvetica, Arial, sans-serif;
@@ -683,9 +686,12 @@ section.key_id{
 	width: 28%;
 }
 .key_sc{
+	position: relative;
 	height: 75px;
 	border-radius: 2px;
 	margin-bottom: 24px;
+	top: 25px;
+	opacity: 0;
 }
 .key_sc p{
 	font: 400 22px/75px "Roboto", Helvetica, Arial, sans-serif;
@@ -711,6 +717,43 @@ section.key_id{
 .key_sign_left{
 	float: left;
 	width: 35%;
+	
+}
+.key_sign_in{
+	position: relative;
+	margin-top: 300px;
+}
+img.img_sing{
+	width: 100%;
+	height: auto;
+}
+.boll{
+	position: absolute;
+	width: 100px;
+}
+.line_boll{
+	width: 100px;
+	background: url(../images/line.png) center top;
+	background-repeat: repeat-y;
+}
+.left_boll{
+	left: -10px; 
+	bottom: 100%;
+}
+.middle_boll{
+	left: 160px; 
+	bottom: 100%;
+}
+.right_boll{
+	right: -10px;
+	bottom: 100%;
+}
+.top_boll{
+	position: relative;
+	width: 2px;
+	height: 2px;
+	left:48px;
+	top: 48px;
 }
 .key_sign_left img{
 	max-width: 100%;
@@ -1514,78 +1557,61 @@ img.mfp-img {
 	.faq_title h1 {
 		font: 100 35px/52px "Roboto", Helvetica, Arial, sans-serif;
 	}
-
-	section.top{
-		padding-top: 120px;
-	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
 .cleaboth{
-	clear: both;
+    clear: both;
 }
 .counter{
-	float: left;
-	width: 100%;
-	text-align: center;
-	margin-bottom: 2%;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
 }
 #defaultCountdown{
-	width: 100%;
-	max-width: 220px;
-	margin: 0 auto;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
 }
-.newsletter{
-	margin-bottom: 6%;
+.top .newsletter{
+    margin-bottom: 6%;
 }
 .counter p{
-	font: 400 16px/18px "Roboto", Helvetica, Arial, sans-serif;
-	color: #282828;
-	margin-bottom: 10px;
+    font: 400 16px/18px "Roboto", Helvetica, Arial, sans-serif;
+    color: #282828 ;
+    margin-bottom: 10px;
 }
 .counter .countdown-amount{
-	font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
-	color: #282828;
+    font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
+    color: #282828 ;
 }
 .counter .countdown-section{
-	position: relative;
-	float: left;
-	margin: 0 10px;
+    position: relative;
+    float: left;
+    margin: 0 10px;
 }
 .counter .countdown-section:after{
-	content: "-";
-	display: block;
-	font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
-	color: #282828;
-	position: absolute;
-	right: -15px;
-	top: 0px;
+    content: "-";
+    display: block;
+    font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
+    color: #282828 ;
+    position: absolute;
+    right: -15px;
+    top: 0px;
 }
 .counter .countdown-section:last-child:after{
-	content: " ";
+    content: " ";
 }
 .counter .countdown-section{
-	position: relative;
+    position: relative;
 }
 .counter .countdown-period{
-	/*display: none;*/
-	clear: both;
-	float: left;
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	top: 30px;
-	left: 0px;
-	font: 300 12px/40px "Roboto", Helvetica, Arial, sans-serif;
+    /*display: none;*/
+    clear: both;
+    float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    left: 0px;
+    font: 300 12px/40px "Roboto", Helvetica, Arial, sans-serif;
 }
-

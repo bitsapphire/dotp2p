@@ -30,7 +30,7 @@
 			<p>Current Buy Price: $582.90</p>
 		</div>
 		<div class="key key_active">
-			<a href="key_id.html">Key ID</a>
+			<a href="#">Key ID</a>
 		</div>
 	</div>
 </header>
@@ -64,7 +64,30 @@
 	<div class="main_key_sign grid16">
 		<div class="key_sign grid14">
 			<div class="key_sign_left">
-				<img src="images/bg_sing.png" />
+				<div class="key_sign_in grid16">
+					<div class="left_boll boll">
+						<div class="top_left_boll top_boll">
+							<img src="images/left_boll.png" />
+						</div>
+						<div class="line_boll left_line_boll">
+						</div>
+					</div>
+					<div class="middle_boll boll">
+						<div class="top_middle_boll top_boll">
+							<img src="images/middle_boll.png" />
+						</div>
+						<div class="line_boll middle_line_boll">
+						</div>
+					</div>
+					<div class="right_boll boll">
+						<div class="top_right_boll top_boll">
+							<img src="images/right_boll.png" />
+						</div>
+						<div class="line_boll right_line_boll">
+						</div>
+					</div>
+					<img src="images/sign_in.png" class="img_sing" />
+				</div>
 			</div>
 			<div class="key_sign_right">
 				<h3><span>KeyID</span> is managed by the BDNS
@@ -114,37 +137,27 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script src="js/jquery.slicknav.js"></script>
 <script type="text/javascript">
-	$(function() {
-	  $('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-		  var target = $(this.hash);
-		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		  if (target.length) {
-			$('html,body').animate({
-			  scrollTop: target.offset().top
-			}, 900);
-			return false;
-		  }
-		}
-	  });
-	   $('#faq').easyResponsiveTabs({
-            type: 'vertical',
-            width: 'auto',
-            fit: true
-        });
+	$( window ).load(function() {
+		$('.key_id_title h1').animate({opacity: "1"}, 1000);
+		$('.key_social_left h2').animate({opacity: "1"}, 1000);
 	});
-	$(document).ready(function() {
-		$('.image-popup-vertical-fit').magnificPopup({ 
-		  type: 'image'
-		});
-		$('.video img').click(function() {
-			$("#thevideo").fadeIn();
-		});
-		$('#menu').slicknav();
-		$('ul.resp-tabs-list li ul') .slideUp(0);
-		$('ul.resp-tabs-list li img').click(function() {
-			$(this).next('ul') .slideToggle();
-		});
+	
+	$(window).scroll(function() {
+		var height = $(window).scrollTop();
+		if(height  > 100) {
+			  $('.key_fcb').delay( 0 ).animate({opacity: "1", top: "0"}, 300);
+			  $('.key_gplus').delay( 100 ).animate({opacity: "1", top: "0"}, 300);
+			  $('.key_twt').delay( 200 ).animate({opacity: "1", top: "0"}, 300);
+			}
+		if(height  > 500) {
+			$('.left_line_boll').animate({height: "113px"}, 800);
+			  $('.middle_line_boll').animate({height: "198px"}, 800);
+			  $('.right_line_boll').animate({height: "113px"}, 800);
+			  $('.top_left_boll').delay( 800 ).animate({width: "100px", height: "100px", left: "0", top: "0"}, 300);
+			  $('.top_middle_boll').delay( 800 ).animate({width: "100px", height: "100px", left: "0", top: "0"}, 500);
+			  $('.top_right_boll').delay( 800 ).animate({width: "100px", height: "100px", left: "0", top: "0"}, 700);
+			}
+		
 	});
 </script>
 </body>
