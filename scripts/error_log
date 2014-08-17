@@ -1,0 +1,1 @@
+[15-Aug-2014 07:30:54 America/New_York] PHP Warning:  json_encode() expects parameter 2 to be long, string given in /home/wwwbmwqh/public_html/dotp2p/scripts/btcvalue.php on line 6

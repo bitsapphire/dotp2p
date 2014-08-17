@@ -177,8 +177,13 @@ nav ul li a{
     color: #3372ad;
 	text-decoration: none;
 	margin-right: 30px;
+	-webkit-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
+nav ul li.active a,
 nav ul li:hover a{
+	color: #282828;
 }
 /* Push */
 
@@ -248,8 +253,11 @@ nav ul li:hover a{
 .key{
 	float: left;
 	background: #3372ad;
-	
+	-webkit-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
+.key:hover,
 .key_active{
 	background: #73c940;
 }
@@ -266,14 +274,18 @@ nav ul li:hover a{
   transform: translateZ(0);
 }
 .key:hover a{
-	-webkit-animation-name: pop;
-  animation-name: pop;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.key:active a,
+.key:focus a{
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
 }
 /* end header */
 /* Section top */
@@ -438,6 +450,7 @@ section.features h2{
 	color: #333333;
 	text-align: center;
 	padding:  0 15px;
+	margin-bottom: 25px;
 }
 .features_content{
 	margin: 0 auto;
@@ -445,8 +458,8 @@ section.features h2{
 .features_item{
 	width:25%;
 	float: left;
-	margin: 60px 4.166666666666667%;
-	min-height: 340px;
+	margin: 40px 4.166666666666667%;
+	min-height: 345px;
 }
 .features_img{
 	width:50%;
@@ -502,6 +515,12 @@ section.team h2{
 	border: 1px solid #ccccff;
 	border-radius: 2px;
 	background: #fff;
+	min-height: 330px;
+	position: relative;
+	padding-bottom: 50px;
+}
+.team_item:nth-child(3n+4){
+	clear: both;
 }
 .team_img{
 	width: 25%;
@@ -542,16 +561,20 @@ section.team h2{
 	transition: all 0.2s linear;
 }
 .team_social{
-	width: 85px;
-	margin:0px auto 10px auto;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 .team_social ul{
-	margin-left: -10px;
+	width: 90px;
+	overflow: hidden;
+	padding: 0;
+	margin:0px auto 10px auto;
 }
 .team_social ul li{
 	float: left;
 	list-style: none;
-	margin-left: 10px;
+	margin:0 5px;
 }
 .team_social ul li a{
 	display: block;
@@ -741,7 +764,7 @@ img.img_sing{
 	bottom: 100%;
 }
 .middle_boll{
-	left: 160px; 
+	left: 38%; 
 	bottom: 100%;
 }
 .right_boll{
@@ -1010,13 +1033,18 @@ h2.resp-accordion:first-child {
 
 /* Button */
 .slicknav_btn {
-    margin: 5px 5px 6px;
+    margin: 15px 5px 6px;
     text-decoration:none;
-    background-color: #3372ad;
 	position: absolute;
 	left: 40%;
 	z-index: 9999;
 	background: #3372ad;
+	-webkit-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.slicknav_btn:hover{
+	background: #73c940;
 }
 /* Button Text */
 .slicknav_menu  .slicknav_menutxt {
@@ -1054,7 +1082,7 @@ z-index: 999;
     padding:5px 10px;
 }
 .slicknav_nav a{
-    padding:5px 10px;
+    padding:10px;
     text-decoration:none;
 	font: 400 16px/20px "Roboto", Helvetica, Arial, sans-serif;
     color:#fff;
@@ -1407,6 +1435,70 @@ img.mfp-img {
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer; }
 
+  /*count down fix*/
+
+.cleaboth{
+    clear: both;
+}
+.counter{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#defaultCountdown{
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+}
+.top .newsletter{
+    margin-bottom: 6%;
+}
+.counter p{
+    font: 400 16px/18px "Roboto", Helvetica, Arial, sans-serif;
+    color: #282828 ;
+    margin-bottom: 10px;
+}
+.counter .countdown-amount{
+    font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
+    color: #282828 ;
+}
+.counter .countdown-section{
+    position: relative;
+    float: left;
+    margin: 0 10px;
+}
+.counter .countdown-section:after{
+    content: "-";
+    display: block;
+    font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
+    color: #282828 ;
+    position: absolute;
+    right: -15px;
+    top: 0px;
+}
+.counter .countdown-section:last-child:after{
+    content: " ";
+}
+.counter .countdown-section{
+    position: relative;
+    min-width: 38px;
+}
+.counter .countdown-period{
+    /*display: none;*/
+    clear: both;
+    float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    left: 0px;
+    font: 300 12px/40px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+
+
+
 /* ========================= end Popup Image style */
 @media only screen and (max-width: 1050px) {
 .right_about {
@@ -1499,8 +1591,40 @@ img.mfp-img {
 		position: fixed;
 		left: 40%;
 	}
+	.team_item:nth-child(3n+4){
+		clear: none;
+	}
+	.team_item:nth-child(2n+3){
+		clear: both;
+	}
 }
 
+@media only screen and (max-width: 650px){
+	.key_social{	
+
+	}
+	.key_sign_left,
+	.key_sign_right,
+	.key_social_right,
+	.key_social_left{
+		width: 100%
+	}
+	.key_social_right{
+		margin-top: 30px;
+	}
+	.key_social{
+		padding: 40px 0;
+	}
+	section.top {
+		padding: 22% 0px 35px 0px;
+	}
+	.main_key_sign{
+		padding-bottom: 80px;
+	}
+	.section.key_id{
+		margin-top: 60px;
+	}
+}
 @media only screen and (max-width: 500px){
 	section.about{
 		padding: 50px 0px;
@@ -1557,61 +1681,4 @@ img.mfp-img {
 	.faq_title h1 {
 		font: 100 35px/52px "Roboto", Helvetica, Arial, sans-serif;
 	}
-}
-.cleaboth{
-    clear: both;
-}
-.counter{
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2%;
-}
-#defaultCountdown{
-    width: 100%;
-    max-width: 220px;
-    margin: 0 auto;
-}
-.top .newsletter{
-    margin-bottom: 6%;
-}
-.counter p{
-    font: 400 16px/18px "Roboto", Helvetica, Arial, sans-serif;
-    color: #282828 ;
-    margin-bottom: 10px;
-}
-.counter .countdown-amount{
-    font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
-    color: #282828 ;
-}
-.counter .countdown-section{
-    position: relative;
-    float: left;
-    margin: 0 10px;
-}
-.counter .countdown-section:after{
-    content: "-";
-    display: block;
-    font: 300 35px/40px "Roboto", Helvetica, Arial, sans-serif;
-    color: #282828 ;
-    position: absolute;
-    right: -15px;
-    top: 0px;
-}
-.counter .countdown-section:last-child:after{
-    content: " ";
-}
-.counter .countdown-section{
-    position: relative;
-}
-.counter .countdown-period{
-    /*display: none;*/
-    clear: both;
-    float: left;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 30px;
-    left: 0px;
-    font: 300 12px/40px "Roboto", Helvetica, Arial, sans-serif;
 }
