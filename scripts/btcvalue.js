@@ -35,6 +35,6 @@ $.ajax({
 
 function setPrice() {
     if ( btcvalue !== false && ptsvalue !== false ) {
-        $('.price p span').text((btcvalue*ptsvalue).toFixed(2));
+     $('.price p span').text((btcvalue*ptsvalue).toFixed(2));
     }
 }
